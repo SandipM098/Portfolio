@@ -3,7 +3,7 @@ const Header = () => {
     const navItems = ["Home", "About", "Service", "Blog", "Contact"];
   return (
     <>
-      <div className="flex justify-between items-center px-14 py-4">
+      <div className="flex justify-between items-center py-4">
         <div className="flex items-center gap-2 cursor-pointer">
           <div className="bg-red-500 border border-red-500 rounded-tr-lg rounded-bl-lg w-8 h-8 text-center">
             <span className="text-xl font-bold">S</span>
@@ -25,7 +25,7 @@ const Header = () => {
         </div>
         <div className="flex items-center gap-10">
           <ThemeToggle />
-          <button className="cursor-pointer border font-semibold bg-red-500 py-2 px-5 shadow-lg shadow-red-500/50 rounded-md hover:bg-transparent hover:text-red-500 transition-colors">
+          <button className="cursor-pointer border font-semibold bg-red-500 py-2 px-5 shadow-md shadow-red-500/50 rounded-md hover:bg-transparent hover:text-red-500 transition-colors hover:border">
             Hire Me
           </button>
         </div>

@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import './styles.css';
-// import { Router } from "react-router-dom";
+import { Router } from "react-router-dom";
 
 const Dice = () => {
   const cubeRef = useRef(null);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
-//   const dragState = useRef({ isDragging: false, startX: 0, startY: 0 });
+  const dragState = useRef({ isDragging: false, startX: 0, startY: 0 });
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -29,39 +29,39 @@ const Dice = () => {
     console.log(rotation);
   }, [rotation]);
 
-//   // Handle mouse drag rotation
-//   const handleMouseDown = (e) => {
-//     dragState.current.isDragging = true;
-//     dragState.current.startX = e.clientX;
-//     dragState.current.startY = e.clientY;
-//   };
+  // Handle mouse drag rotation
+  const handleMouseDown = (e) => {
+    dragState.current.isDragging = true;
+    dragState.current.startX = e.clientX;
+    dragState.current.startY = e.clientY;
+  };
 
-//   const handleMouseMove = (e) => {
-//     if (!dragState.current.isDragging) return;
+  const handleMouseMove = (e) => {
+    if (!dragState.current.isDragging) return;
 
-//     const deltaX = e.clientX - dragState.current.startX;
-//     const deltaY = e.clientY - dragState.current.startY;
+    const deltaX = e.clientX - dragState.current.startX;
+    const deltaY = e.clientY - dragState.current.startY;
 
-//     dragState.current.startX = e.clientX;
-//     dragState.current.startY = e.clientY;
+    dragState.current.startX = e.clientX;
+    dragState.current.startY = e.clientY;
 
-//     setRotation((prev) => ({
-//       x: prev.x + deltaY * 0.5,
-//       y: prev.y + deltaX * 0.5,
-//     }));
-//   };
+    setRotation((prev) => ({
+      x: prev.x + deltaY * 0.5,
+      y: prev.y + deltaX * 0.5,
+    }));
+  };
 
-//   const handleMouseUp = () => {
-//     dragState.current.isDragging = false;
-//   };
+  const handleMouseUp = () => {
+    dragState.current.isDragging = false;
+  };
 
   return (
     <div
       className="scene"
-    //   onMouseDown={handleMouseDown}
-    //   onMouseMove={handleMouseMove}
-    //   onMouseUp={handleMouseUp}
-    //   onMouseLeave={handleMouseUp}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
     >
       <div className="cube" ref={cubeRef}>
         <div className="face one">1</div>

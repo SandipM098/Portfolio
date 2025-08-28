@@ -1,8 +1,16 @@
 import React from 'react'
+import Header from '../Components/Header'
+import { Welcome } from './Welcome'
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <>
+    <div className='mx-40'>
+    <Header/>
+    <br />
+    <Welcome/>
+    </div>
+    </>
   )
 }
 
