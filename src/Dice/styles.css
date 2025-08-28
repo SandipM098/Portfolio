@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .scene {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    cursor: grab;
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    color: #000;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    box-shadow: 5px 10px 8px #888888 inset;
+  }
+  
+  .face.one   { transform: rotateY(  0deg) translateZ(100px); }
+  .face.two   { transform: rotateY(180deg) translateZ(100px); }
+  .face.three { transform: rotateY( 90deg) translateZ(100px); }
+  .face.four  { transform: rotateY(-90deg) translateZ(100px); }
+  .face.five  { transform: rotateX( 90deg) translateZ(100px); }
+  .face.six   { transform: rotateX(-90deg) translateZ(100px); }
+  
