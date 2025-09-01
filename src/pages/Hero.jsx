@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
 import { Welcome } from './Welcome'
+import AboutMe from './AboutMe'
 
 const Hero = () => {
   return (
@@ -9,6 +10,8 @@ const Hero = () => {
     <Header/>
     <br />
     <Welcome/>
+    <br />
+    <AboutMe/>
     </div>
     </>
   )

@@ -17,13 +17,22 @@ code {
 }
 
 .light-mode {
-  --bg-color: #ffffff;
+  --bg-color: #eeeded;
+  /* --bg-color: #f0efe2 */
   --text-color: #000000;
+
+  p{
+    color: #000000;
+  }
 }
 
 .dark-mode {
   --bg-color: rgb(43, 42, 42);
   --text-color: #ffffff;
+
+  p{
+    color: #94a3b8;
+  }
 }
 
 
