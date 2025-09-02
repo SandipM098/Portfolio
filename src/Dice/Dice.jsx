@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import './styles.css';
-import { Router } from "react-router-dom";
+// import { Router } from "react-router-dom";
 
 const Dice = () => {
   const cubeRef = useRef(null);

@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../Components/Header'
 import { Welcome } from './Welcome'
 import AboutMe from './AboutMe'
+import Contact from './Contact'
 
 const Hero = () => {
   return (
@@ -12,6 +13,8 @@ const Hero = () => {
     <Welcome/>
     <br />
     <AboutMe/>
+    <br />
+    <Contact/>
     </div>
     </>
   )

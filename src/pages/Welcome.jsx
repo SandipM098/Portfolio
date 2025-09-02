@@ -6,6 +6,8 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { RiReactjsLine } from "react-icons/ri";
 import { AiOutlineDotNet } from "react-icons/ai";
 import { IoLogoNodejs } from "react-icons/io5";
+
+import Skill from "../Components/Skill";
 export const Welcome = () => {
   const { theme } = useTheme();
   return (
@@ -35,65 +37,17 @@ export const Welcome = () => {
           <div>
             <p className="font-semibold text-sm">FIND WITH ME</p>
             <ul className="flex gap-3 mt-2">
-              <li
-                className={`${
-                  theme === "dark-mode"
-                    ? "bg-gradient-to-br from-[#000000] via-[#2a2a2a] to-[#2d2d2d] p-2 shadow-lg shadow-slate-500 text-white text-xl"
-                    : "bg-white p-2 shadow-lg shadow-slate-200 text-black text-xl"
-                }  rounded-md`}
-              >
-                <TbBrandFacebook />
-              </li>
-              <li
-                className={`${
-                  theme === "dark-mode"
-                    ? "bg-gradient-to-br from-[#000000] via-[#2a2a2a] to-[#2d2d2d] p-2 shadow-lg shadow-slate-500 text-white text-xl"
-                    : "bg-white p-2 shadow-lg shadow-slate-200 text-black text-xl"
-                }   rounded-md`}
-              >
-                <IoLogoInstagram />
-              </li>
-              <li
-                className={`${
-                  theme === "dark-mode"
-                    ? "bg-gradient-to-br from-[#000000] via-[#2a2a2a] to-[#2d2d2d] p-2 shadow-lg shadow-slate-500 text-white text-xl"
-                    : "bg-white p-2 shadow-lg shadow-slate-200 text-black text-xl"
-                } rounded-md`}
-              >
-                <FaLinkedinIn />
-              </li>
+              <Skill Icon={TbBrandFacebook} />
+              <Skill Icon={IoLogoInstagram} />
+              <Skill Icon={FaLinkedinIn} />
             </ul>
           </div>
           <div className="mr-20">
             <p className="font-semibold text-sm">BEST SKILL ON</p>
             <ul className="flex gap-3 mt-2">
-              <li
-                className={`${
-                  theme === "dark-mode"
-                    ? "bg-gradient-to-br from-[#000000] via-[#2a2a2a] to-[#2d2d2d] p-2 shadow-lg shadow-slate-500 text-white text-xl"
-                    : "bg-white p-2 shadow-lg shadow-slate-200 text-black text-xl"
-                } rounded-md`}
-              >
-                <RiReactjsLine />
-              </li>
-              <li
-                className={`${
-                  theme === "dark-mode"
-                    ? "bg-gradient-to-br from-[#000000] via-[#2a2a2a] to-[#2d2d2d] p-2 shadow-lg shadow-slate-500 text-white text-xl"
-                    : "bg-white p-2 shadow-lg shadow-slate-200 text-black text-xl"
-                } rounded-md`}
-              >
-                <AiOutlineDotNet />
-              </li>
-              <li
-                className={`${
-                  theme === "dark-mode"
-                    ? "bg-gradient-to-br from-[#000000] via-[#2a2a2a] to-[#2d2d2d] p-2 shadow-lg shadow-slate-500 text-white text-xl"
-                    : "bg-white p-2 shadow-lg shadow-slate-200 text-black text-xl"
-                } rounded-md`}
-              >
-                <IoLogoNodejs />
-              </li>
+              <Skill Icon={RiReactjsLine} />
+              <Skill Icon={AiOutlineDotNet} />
+              <Skill Icon={IoLogoNodejs} />
             </ul>
           </div>
         </div>
