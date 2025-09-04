@@ -2,6 +2,11 @@
 import { useTheme } from '../context/ThemeContext';
 import Input from '../Components/Input';
 // import Button from '../Components/Button';
+
+import { RiWhatsappLine } from "react-icons/ri";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+
 const Contact = () => {
     const { theme } = useTheme();
   return (
@@ -31,12 +36,32 @@ const Contact = () => {
               />
             </div>
           </div>
+          <br />
           <div className="flex justify-center mt-4">
             <button className="cursor-pointer border font-semibold bg-red-500 py-2 px-5 shadow-md shadow-red-300 rounded-md hover:bg-transparent hover:text-red-500 transition-colors hover:border text-white">
               Submit Form
-            </button>
+            </button> 
           </div>
         </form>
+        <br />
+        <div className="flex justify-between">
+          <div className="flex flex-col items-center p-10">
+            <RiWhatsappLine className="text-green-600 h-10 w-14 mb-2" />
+            <p>+21212 32323 32323</p>
+            <p>+21212 32323 32323</p>
+          </div>
+          <div className="flex flex-col items-center p-10">
+            <FaLocationDot className="text-purple-800 h-9 w-14 mb-2" />
+            <p>Nepal, Kathmandu</p>
+            <p>Kageshwori Manohara</p>
+            <p>32322</p>
+          </div>
+          <div className="flex flex-col items-center p-10">
+            <MdEmail className="text-red-500 h-10 w-14 mb-2" />
+            <p>helloworld@gmail.com</p>
+            <p>test112@gmail.com</p>
+          </div>
+        </div>
       </div>
     </>
   );
