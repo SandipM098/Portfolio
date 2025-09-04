@@ -1,3 +1,4 @@
+import Button from "../Components/Button";
 import { useTheme } from "../context/ThemeContext";
 
 const AboutMe = () => {
@@ -35,9 +36,7 @@ const AboutMe = () => {
             necessitatibus
           </p>
           <br />
-          <button className="bg-red-600 py-3 px-5 rounded-md shadow-md shadow-red-300 text-sm ">
-            DOWNLOAD PDF
-          </button>
+          <Button Name={'Download PDF'}/>
         </div>
       </div>
     </>
